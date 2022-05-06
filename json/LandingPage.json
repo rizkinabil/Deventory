@@ -1,0 +1,81 @@
+{
+  "collection": [
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Learning Resources",
+      "description": "ini deskripsi tentang collection learning resources",
+      "imageUrl": "",
+      "items": [
+        {
+          "_id": "asd1293uasdads1",
+          "web_name": "blablab.com",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi tentang website blabalba.com"
+        }
+      ]
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Design Ideas",
+      "description": "ini deskripsi tentang collection Design Ideas",
+      "imageUrl": "",
+      "items": [
+        {
+          "_id": "asd1293uasdads1",
+          "web_name": "blablab.com",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi tentang website blabalba.com"
+        }
+      ]
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Illustrations",
+      "description": "ini deskripsi tentang collection Illustrations",
+      "imageUrl": "",
+      "items": [
+        {
+          "_id": "asd1293uasdads1",
+          "web_name": "blablab.com",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi tentang website blabalba.com"
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "_id": "asd1293uasdads1",
+      "categories": "Web Development",
+      "item_blog": [
+        {
+          "_id": "asd1293uasdads1",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi blog blabalba",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "title": "Callback vs Promises vs Async Await",
+          "author": "Rizki nabil",
+          "upload_at": "Apr 28"
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi blog blabalba",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "title": "Callback vs Promises vs Async Await",
+          "author": "Rizki nabil",
+          "upload_at": "Apr 28"
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "poster_path": "https://blablab.com",
+          "description": "ini deskripsi blog blabalba",
+          "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "title": "Callback vs Promises vs Async Await",
+          "author": "Rizki nabil",
+          "upload_at": "Apr 28"
+        }
+      ]
+    }
+  ]
+}
