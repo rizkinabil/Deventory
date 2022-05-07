@@ -66,8 +66,7 @@ body {
   }
 }
 
-// navbar
-
+// ==== brand logo ====
 .navbar-brand-logo {
   font-family: 'Poppins', sans-serif;
   color: $danger;
@@ -87,20 +86,28 @@ body {
   }
 }
 
-.navbar-nav {
-  a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: $dark;
-  }
+// ==== end of brand logo ====
 
-  button {
-    font-family: 'Poppins', sans-serif;
-    color: #e4e4e4;
+// ==== navbar ====
+.wrapper-navbar {
+  background-color: rgba(248, 248, 248, 0.7);
+  .navbar-nav {
+    a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      color: $dark;
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      color: #e4e4e4;
+    }
   }
 }
 
-// herosection
+// ==== end of navbar ====
+
+// ==== herosection ====
 .wrapper-hero {
   background-image: url('../images/bg-assets-1.jpg');
   background-repeat: no-repeat;
@@ -128,6 +135,173 @@ body {
       line-height: 30px;
     }
   }
+}
+
+// ==== end of herosection ====
+
+// ==== collection ====
+.collection-wrapper {
+  margin: 50px auto 80px auto;
+  font-family: 'Poppins', sans-serif;
+
+  .collection-title {
+    align-items: center;
+    margin-bottom: 40px;
+    img {
+      width: 30.4px;
+      height: 30.4px;
+      margin: 0 22.6px 10px 0;
+    }
+  }
+
+  // custom-card
+  .custom-card {
+    width: 15.1875rem;
+    height: 20.8125rem;
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+      transition: all ease-in-out 0.1s;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 31px 24px;
+    }
+    .arrow-right {
+      width: 35px;
+      height: 35px;
+      margin: 31px 24px;
+    }
+  }
+
+  // illustration
+  .svg-1 {
+    position: absolute;
+    left: -40px;
+  }
+  .svg-2 {
+    position: absolute;
+    right: -85px;
+  }
+  .svg-3 {
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+  }
+
+  .bottom-title {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  #card-1 {
+    background-color: #000000;
+    margin-right: 47px;
+  }
+  #card-2 {
+    background-color: #a888da;
+    margin-right: 47px;
+  }
+
+  #card-3 {
+    margin-right: 47px;
+  }
+}
+
+// ==== end of collection ====
+
+// ==== blog ====
+.blog-wrapper {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 38px;
+  .blog-head {
+    margin-bottom: 57px;
+    align-items: center;
+    img {
+      margin: 0 26px 10px 4px;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+    }
+  }
+
+  .wrapper-blog-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(329.6px, 1fr));
+    gap: 31px;
+
+    .blog-content {
+      height: 150px;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: all ease-in-out 0.3s;
+
+        .blog-title,
+        .blog-index,
+        .upload-at {
+          filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+        }
+      }
+
+      .blog-index {
+        align-items: center;
+        margin-right: 19px;
+        h1 {
+          color: #c4c4c4;
+        }
+      }
+
+      .blog-title {
+        position: relative;
+        h1 {
+          font-size: 20px;
+          color: #000000;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .upload-at {
+          position: absolute;
+          color: #c4c4c4;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .see-more-wrapper {
+    cursor: pointer;
+    &:hover {
+      .arrow,
+      .see-more {
+        transform: scale(1.03);
+        transition: all ease-in;
+        filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+      }
+    }
+    .arrow {
+      margin: 10px 19px;
+    }
+  }
+}
+
+// ==== end of blog ===
+
+// ==== Banner ====
+.banner-wrapper {
+  margin: 140px auto;
 }
 
 // footer
