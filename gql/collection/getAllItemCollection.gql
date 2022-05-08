@@ -1,0 +1,14 @@
+query MyQuery {
+  item_collection {
+    _id
+    collection {
+      _id
+      description
+      imageUrl
+      name
+    }
+    description
+    poster_path
+    web_name
+  }
+}

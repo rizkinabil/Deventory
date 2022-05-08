@@ -1,0 +1,6 @@
+query MyQuery {
+  blogs {
+    _id
+    categories
+  }
+}

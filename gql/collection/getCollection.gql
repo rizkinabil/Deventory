@@ -1,0 +1,8 @@
+query MyQuery {
+  collections {
+    _id
+    name
+    imageUrl
+    description
+  }
+}
