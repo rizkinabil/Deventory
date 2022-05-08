@@ -3,7 +3,7 @@
   <section>
     <nav class="navbar navbar-expand-lg wrapper-navbar navbar-light fixed-top">
       <div class="container">
-        <brand-text-icon :isBig="false" />
+        <brand-text-icon isDark />
 
         <button
           class="navbar-toggler"
@@ -37,36 +37,70 @@
     <!-- end of main -->
 
     <div class="footer-wrapper">
-      <div class="footer container d-flex">
-        <div class="col-md-5">
-          <brand-text-icon :isBig="false" />
-          <p class="text-light">
-            No need to bookmark your web tools references, just open this and
-            all the thing is here :)
-          </p>
-        </div>
-        <div class="col-md-7">
-          <div class="row">
-            <div class="col-sm-4">
-              <h1>collection</h1>
+      <div class="footer container">
+        <div class="row">
+          <div class="col-md-3">
+            <brand-text-icon />
+            <p class="font-weight-light text-graymuda mt-3">
+              No need to bookmark your web tools references, just open this and
+              all the thing is here :)
+            </p>
+          </div>
+          <div class="col-md-9 d-flex">
+            <div class="col-md-4">
+              <h1 class="font-weight-normal">Collection</h1>
 
-              <div class="collection" v-for="item in collections" :key="item">
-                <p class="text-light">{{ item.name }}</p>
+              <div
+                class="footer-sublink font-weight-light"
+                v-for="(item, index) in collections.slice(0, 4)"
+                :key="index"
+              >
+                <ul>
+                  <li>
+                    <a href="#" class="text-graymuda">{{ item.name }}</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-sm-4">
-              <h1>Blog</h1>
-              <div class="collection" v-for="item in collections" :key="item">
-                <p class="text-light">{{ item.name }}</p>
+            <div class="col-md-4">
+              <h1 class="font-weight-normal">Blog</h1>
+              <div
+                class="footer-sublink font-weight-light"
+                v-for="(item, index) in blogs.slice(0, 4)"
+                :key="index"
+              >
+                <ul>
+                  <li>
+                    <a href="#" class="text-graymuda">{{ item.categories }}</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-sm-4">
-              <h1>Contact</h1>
-              <div class="collection" v-for="item in collections" :key="item">
-                <p class="text-light">{{ item.name }}</p>
+            <div class="col-md-4">
+              <h1 class="font-weight-normal">Contact</h1>
+              <div class="footer-sublink font-weight-light">
+                <ul>
+                  <li class="mb-3">
+                    <a href="#" class="text-graymuda">0821-1277-6194</a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="#" class="text-graymuda">rizki.nbl123@gmail.com</a>
+                  </li>
+
+                  <li class="mb-3">
+                    <a href="#" class="text-graymuda"
+                      >Deventory, Kemang, Jakarta.</a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+        <div class="row bottom-footer">
+          <p class="font-weight-light text-graymuda">
+            Copyright 2022 • All rights reserved • Deventory
+          </p>
         </div>
       </div>
     </div>
@@ -76,28 +110,27 @@
 // brandIcon component
 import brandTextIcon from '../components/BrandIcon/index.vue'
 
+// collection
+import getCollection from '../gql/collection/getCollection.gql'
+
+// blog
+import getBlog from '../gql/blog/getBlog.gql'
+
 export default {
   name: 'Navbar',
   components: {
     brandTextIcon,
   },
   data() {
-    return {
-      collections: [
-        {
-          name: 'Illustration',
-        },
-        {
-          name: 'Learning Resources',
-        },
-        {
-          name: 'Design Ideas',
-        },
-        {
-          name: 'Chrome Extension',
-        },
-      ],
-    }
+    return {}
+  },
+  apollo: {
+    collections: {
+      query: getCollection,
+    },
+    blogs: {
+      query: getBlog,
+    },
   },
 }
 </script>

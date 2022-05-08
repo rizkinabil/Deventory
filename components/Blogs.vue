@@ -7,7 +7,7 @@
     <div class="wrapper-blog-content">
       <div
         class="blog-content d-flex"
-        v-for="(item, index) in item_blog"
+        v-for="(item, index) in item_blog.slice(0, 5)"
         :key="index"
       >
         <div class="col-2 blog-index">
@@ -23,7 +23,7 @@
             <h1 class="font-weight-bold">"{{ item.title }}"</h1>
           </div>
           <div class="row date">
-            <p class="font-weight-light upload-at">
+            <p class="font-weight-light upload-at text-graymuda">
               {{
                 new Date(item.upload_at).toLocaleString('default', {
                   month: 'short',
@@ -50,13 +50,13 @@
 </template>
 
 <script>
-import getAllBlog from '../gql/blog/getAllBlog.gql'
+import getAllItemBlog from '../gql/blog/getAllItemBlog.gql'
 
 export default {
   name: 'BlogsComponent',
   apollo: {
     item_blog: {
-      query: getAllBlog,
+      query: getAllItemBlog,
     },
   },
 }

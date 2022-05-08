@@ -11,7 +11,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #e4e4e4 !default; // custom
 $gray-400: #ced4da !default;
 $gray-500: #b0b0b0 !default; // custom
-$gray-600: #746C74 !default; // custom
+$gray-600: #746c74 !default; // custom
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -74,6 +74,7 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default; // custom
 $dark: $black !default;
+$graymuda: $gray-500; // custom
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -87,6 +88,7 @@ $theme-colors: map-merge(
     'danger': $danger,
     'light': $light,
     'dark': $dark,
+    'graymuda': $graymuda,
   ),
   $theme-colors
 );

@@ -14,7 +14,7 @@
     </div>
     <div class="cta-button">
       <button class="btn-custom-lg font-weight-normal">Let's Start</button>
-      <button id="seeBlog" class="btn">See Blog</button>
+      <button class="btn">See Blog</button>
     </div>
   </div>
 </template>

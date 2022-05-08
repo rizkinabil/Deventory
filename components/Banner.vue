@@ -1,7 +1,7 @@
 <template>
   <div class="container banner-wrapper">
     <div class="row d-flex">
-      <div class="col-3">
+      <div class="col-3 banner-text">
         <h1 class="font-weight-bold">
           Lorem Blabdlabfasd lfbdlfkasdkl fsdbasd fsdfadf
         </h1>
@@ -12,7 +12,7 @@
           alt="banner-image"
         />
       </div>
-      <div class="col-3">
+      <div class="col-3 banner-text">
         <p class="font-weight-light">
           sdfasdfasdfasdfasfd dafsdfasdfasdfasdfas dfas fsdlfksld fdksla
           fdkfjalsjdf as dflk asdlk fasldfj lsdfldsaj flsdlf asld flskd fk klS

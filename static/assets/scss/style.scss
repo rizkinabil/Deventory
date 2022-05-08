@@ -50,6 +50,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 // custom button
@@ -59,7 +60,6 @@ body {
   color: #e4e4e4;
   padding: 10px 0;
   width: 191px;
-  font-family: 'Poppins', sans-serif;
 
   &:hover {
     color: $light;
@@ -68,7 +68,6 @@ body {
 
 // ==== brand logo ====
 .navbar-brand-logo {
-  font-family: 'Poppins', sans-serif;
   color: $danger;
   border: none;
   margin: auto;
@@ -78,28 +77,20 @@ body {
     text-decoration: none;
     color: $danger;
   }
-  span {
-    color: $dark;
-  }
-  #titik {
-    color: $danger;
-  }
 }
 
 // ==== end of brand logo ====
 
 // ==== navbar ====
 .wrapper-navbar {
-  background-color: rgba(248, 248, 248, 0.7);
+  background: rgba(228, 228, 228, 0.6);
   .navbar-nav {
     a {
-      font-family: 'Poppins', sans-serif;
       font-weight: 400;
       color: $dark;
     }
 
     button {
-      font-family: 'Poppins', sans-serif;
       color: #e4e4e4;
     }
   }
@@ -115,11 +106,7 @@ body {
   padding: 170px 0;
   .headline {
     margin: 23px 241px;
-    h1,
-    p,
-    #seeBlog {
-      font-family: 'Poppins', sans-serif;
-    }
+
     h1 {
       font-size: 64px;
       line-height: 90px;
@@ -142,7 +129,6 @@ body {
 // ==== collection ====
 .collection-wrapper {
   margin: 50px auto 80px auto;
-  font-family: 'Poppins', sans-serif;
 
   .collection-title {
     align-items: center;
@@ -219,7 +205,6 @@ body {
 
 // ==== blog ====
 .blog-wrapper {
-  font-family: 'Poppins', sans-serif;
   margin-bottom: 38px;
   .blog-head {
     margin-bottom: 57px;
@@ -228,7 +213,6 @@ body {
       margin: 0 26px 10px 4px;
     }
     h2 {
-      font-family: 'Poppins', sans-serif;
       font-size: 32px;
     }
   }
@@ -274,7 +258,6 @@ body {
 
         .upload-at {
           position: absolute;
-          color: #c4c4c4;
           bottom: 10px;
         }
       }
@@ -302,17 +285,42 @@ body {
 // ==== Banner ====
 .banner-wrapper {
   margin: 140px auto;
+
+  .banner-text {
+    margin: auto 0;
+
+    p {
+      font-size: 24px;
+    }
+  }
 }
 
-// footer
+// ==== end of banner ====
+
+// ==== footer ====
 .footer-wrapper {
   background-color: $dark;
 
   .footer {
-    top: 500px;
-  }
+    padding-top: 60px;
 
-  h1 {
-    color: $light;
+    text-align: left;
+
+    h1 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      padding-left: 40px;
+    }
+
+    .footer-sublink {
+      font-size: 14px;
+    }
+
+    .bottom-footer {
+      p {
+        margin: 60px auto 5px;
+      }
+    }
   }
 }
