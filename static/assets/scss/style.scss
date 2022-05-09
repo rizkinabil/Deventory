@@ -44,6 +44,10 @@
 @import 'utilities';
 @import 'print';
 
+// page style
+@import 'collection-page';
+@import 'item-collection-page';
+
 // root
 body {
   background-color: $light;

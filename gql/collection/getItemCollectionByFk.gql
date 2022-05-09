@@ -1,0 +1,14 @@
+query MyQuery($collectionId: uuid!) {
+  item_collection(where: { collection_id: { _eq: $collectionId } }) {
+    _id
+    collection_id
+    description
+    poster_path
+    web_name
+    collection {
+      description
+      imageUrl
+      name
+    }
+  }
+}

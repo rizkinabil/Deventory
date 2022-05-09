@@ -1,0 +1,44 @@
+.wrapper-headline-collection {
+  padding: 107px 230px 77px;
+  .headline-collection {
+    h1 {
+      font-size: 4rem;
+      line-height: 96px;
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 30px;
+    }
+  }
+}
+.list-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+  gap: 20px;
+  margin-bottom: 200px;
+
+  .collection-item {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: #ffffff;
+    height: 377px;
+    padding: 29px 0;
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    .img-collection-wrapper {
+      img {
+        width: 50%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+      transition: all ease-in-out 0.1s;
+    }
+  }
+}
