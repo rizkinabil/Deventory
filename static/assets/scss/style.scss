@@ -47,6 +47,7 @@
 // page style
 @import 'collection-page';
 @import 'item-collection-page';
+@import 'blog-page';
 
 // root
 body {
@@ -87,17 +88,24 @@ body {
 
 // ==== navbar ====
 .wrapper-navbar {
-  background: rgba(228, 228, 228, 0.6);
+  // background: rgba(228, 228, 228, 0.6);
+  transition: all ease-in-out 0.1s;
   .navbar-nav {
-    a {
-      font-weight: 400;
-      color: $dark;
-    }
+    // a {
+    //   font-weight: 400;
+    //   color: $dark;
+    // }
 
     button {
       color: #e4e4e4;
     }
   }
+}
+
+// solid when scroll class
+.shrink {
+  background-color: #ffffff;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 // ==== end of navbar ====
@@ -144,8 +152,8 @@ body {
     }
   }
 
-  // custom-card
-  .custom-card {
+  // custom-card-collection
+  .custom-card-collection {
     width: 15.1875rem;
     height: 20.8125rem;
     border-radius: 20px;

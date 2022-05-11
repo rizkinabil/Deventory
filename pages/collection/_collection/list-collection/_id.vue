@@ -49,7 +49,7 @@
                     {{ item.web_name }}
                   </h1>
                   <p class="font-weight-light text-graymuda">
-                    {{ truncateString(item.description, 150) }}
+                    {{ trunc(item.description, 150) }}
                   </p>
                   <a
                     :href="`http://${item.web_name}`"
@@ -79,6 +79,8 @@
 </template>
 
 <script>
+import util from '../../../../utils/util'
+
 export default {
   name: 'ItemCollectionComponent',
   layout: 'default',
@@ -88,11 +90,8 @@ export default {
     },
   },
   methods: {
-    truncateString(str, num) {
-      if (str.length <= num) {
-        return str
-      }
-      return str.slice(0, num) + '...'
+    trunc(str, num) {
+      return util.truncateString(str, num)
     },
   },
 }

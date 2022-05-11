@@ -42,7 +42,9 @@
         </div>
 
         <div class="see-more">
-          <h1 class="font-weight-bold">See More...</h1>
+          <NuxtLink to="/blog" class="text-dark" style="text-decoration: none">
+            <h1 class="font-weight-bold">See More...</h1>
+          </NuxtLink>
         </div>
       </div>
     </div>

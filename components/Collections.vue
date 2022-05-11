@@ -8,7 +8,7 @@
       <h2 class="font-weight-normal">Collections</h2>
     </div>
     <div class="card-wrapper d-flex">
-      <div class="custom-card" id="card-1">
+      <div class="custom-card-collection" id="card-1">
         <NuxtLink
           :to="`/collection/${collections[0].name}/list-collection/${collections[0]._id}`"
           style="text-decoration: none"
@@ -24,7 +24,7 @@
           </div>
         </NuxtLink>
       </div>
-      <div class="custom-card" id="card-2">
+      <div class="custom-card-collection" id="card-2">
         <NuxtLink
           :to="`/collection/${collections[1].name}/list-collection/${collections[1]._id}`"
           style="text-decoration: none"
@@ -40,7 +40,7 @@
           </div>
         </NuxtLink>
       </div>
-      <div class="custom-card" id="card-3">
+      <div class="custom-card-collection" id="card-3">
         <NuxtLink
           :to="`/collection/${collections[2].name}/list-collection/${collections[2]._id}`"
           class="text-dark"
@@ -56,7 +56,7 @@
         </NuxtLink>
       </div>
       <NuxtLink to="/collection" class="text-dark">
-        <div class="custom-card">
+        <div class="custom-card-collection">
           <div>
             <img
               class="arrow-right"

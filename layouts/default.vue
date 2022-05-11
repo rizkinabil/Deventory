@@ -1,7 +1,16 @@
 <template>
   <!-- navbar -->
   <section>
-    <nav class="navbar navbar-expand-lg wrapper-navbar navbar-light fixed-top">
+    <nav
+      id="nav-element"
+      class="
+        navbar navbar-expand-lg
+        wrapper-navbar
+        is-transparent
+        navbar-light
+        fixed-top
+      "
+    >
       <div class="container">
         <brand-text-icon isDark />
 
@@ -21,9 +30,9 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="#">Collection</a>
-            <a class="nav-link" href="#">Blog</a>
+            <NuxtLink class="nav-link" to="/">Home</NuxtLink>
+            <NuxtLink class="nav-link" to="/collection">collection </NuxtLink>
+            <NuxtLink class="nav-link" to="/blog">Blog</NuxtLink>
             <button class="btn btn-dark font-weight-normal">Share</button>
           </div>
         </div>
@@ -121,8 +130,23 @@ export default {
   components: {
     brandTextIcon,
   },
-  data() {
-    return {}
+  mounted() {
+    this.$nextTick(function () {
+      window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('nav-element')
+        var nav_classes = navbar.classList
+
+        if (document.documentElement.scrollTop >= 150) {
+          if (nav_classes.contains('shrink') === false) {
+            nav_classes.toggle('shrink')
+          }
+        } else {
+          if (nav_classes.contains('shrink') === true) {
+            nav_classes.toggle('shrink')
+          }
+        }
+      })
+    })
   },
   apollo: {
     collections: {
