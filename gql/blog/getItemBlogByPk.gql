@@ -1,0 +1,15 @@
+query MyQuery($id: uuid!) {
+  item_blog(where: { _id: { _eq: $id } }) {
+    _id
+    author
+    blog {
+      _id
+      categories
+    }
+    paragraph
+    poster_path
+    preview_text
+    title
+    upload_at
+  }
+}

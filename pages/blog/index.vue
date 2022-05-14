@@ -3,8 +3,8 @@
     <div class="head-blog text-center">
       <h1 class="font-weight-normal text-dark">Discover Blog</h1>
       <p class="font-weight-light text-graymuda">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus,
-        doloribus!
+        Read articles about techstack, design, illustration and anything about
+        web development here...
       </p>
     </div>
     <div class="card-display">
@@ -24,12 +24,14 @@
           <p class="preview-text text-graymuda">
             {{ trunc(item.preview_text, 80) }}
           </p>
-          <h3 class="font-weight-normal">
-            READ MORE
-            <span
-              ><img src="../../static/assets/images/arrow-right.svg" alt=""
-            /></span>
-          </h3>
+          <NuxtLink :to="`/blog/${item.title}/${item._id}`">
+            <h3 class="font-weight-normal">
+              READ MORE
+              <span
+                ><img src="../../static/assets/images/arrow-right.svg" alt=""
+              /></span>
+            </h3>
+          </NuxtLink>
         </div>
       </div>
     </div>

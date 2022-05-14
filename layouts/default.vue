@@ -33,7 +33,15 @@
             <NuxtLink class="nav-link" to="/">Home</NuxtLink>
             <NuxtLink class="nav-link" to="/collection">collection </NuxtLink>
             <NuxtLink class="nav-link" to="/blog">Blog</NuxtLink>
-            <button class="btn btn-dark font-weight-normal">Share</button>
+            <button class="btn btn-dark">
+              <a
+                class="font-weight-normal text-light"
+                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fparse.com"
+                rel="noopener"
+              >
+                <i class="fab fa-2x fa-twitter"></i>Share
+              </a>
+            </button>
           </div>
         </div>
       </div>
@@ -66,21 +74,23 @@
               >
                 <ul>
                   <li>
-                    <a href="#" class="text-graymuda">{{ item.name }}</a>
+                    <NuxtLink
+                      :to="`/collection/${item.name}/list-collection/${item._id}`"
+                      class="text-graymuda"
+                      >{{ item.name }}</NuxtLink
+                    >
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <h1 class="font-weight-normal">Blog</h1>
-              <div
-                class="footer-sublink font-weight-light"
-                v-for="(item, index) in blogs.slice(0, 4)"
-                :key="index"
-              >
+              <div class="footer-sublink font-weight-light">
                 <ul>
                   <li>
-                    <a href="#" class="text-graymuda">{{ item.categories }}</a>
+                    <NuxtLink to="/blog" class="text-graymuda"
+                      >Discover Blog</NuxtLink
+                    >
                   </li>
                 </ul>
               </div>

@@ -48,6 +48,7 @@
 @import 'collection-page';
 @import 'item-collection-page';
 @import 'blog-page';
+@import 'item-blog-page';
 
 // root
 body {
@@ -91,13 +92,8 @@ body {
   // background: rgba(228, 228, 228, 0.6);
   transition: all ease-in-out 0.1s;
   .navbar-nav {
-    // a {
-    //   font-weight: 400;
-    //   color: $dark;
-    // }
-
-    button {
-      color: #e4e4e4;
+    a {
+      text-decoration: none;
     }
   }
 }

@@ -14,7 +14,7 @@
     </div>
     <div class="cta-button">
       <button class="btn-custom-lg font-weight-normal">Let's Start</button>
-      <button class="btn">See Blog</button>
+      <NuxtLink to="/blog" class="text-dark ml-3">See Blog</NuxtLink>
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
   components: {
     brandTextIcon,
   },
+  emits: ['scrollTo'],
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <section>
     <hero-section />
-    <collection-section />
+    <collection-section ref="start" />
     <blog-section />
     <banner-section />
   </section>

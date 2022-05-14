@@ -2,8 +2,10 @@
   <div class="container banner-wrapper">
     <div class="row d-flex">
       <div class="col-3 banner-text">
-        <h1 class="font-weight-bold">
-          Lorem Blabdlabfasd lfbdlfkasdkl fsdbasd fsdfadf
+        <h1 class="font-weight-bold text-right">
+          Find any Ideas, <br />
+          Learn to it, <br />
+          and make it come true.
         </h1>
       </div>
       <div class="col-6">
@@ -14,11 +16,10 @@
       </div>
       <div class="col-3 banner-text">
         <p class="font-weight-light">
-          sdfasdfasdfasdfasfd dafsdfasdfasdfasdfas dfas fsdlfksld fdksla
-          fdkfjalsjdf as dflk asdlk fasldfj lsdfldsaj flsdlf asld flskd fk klS
-          ldf lkasdklf jlasd flasd flkasd flasdlk f dfla
-          sdfkjaslkdfjkalsdjkflajskldfj slkd aflkdajf lasjdfkl
-          asdfklasjlkfjalskdjflkasjdflkajs dlka fdlsak flsa f
+          “Technology will never replace great teachers, but in the hands of
+          great teachers, it’s transformational.” <br />
+          <br />
+          – George Couros
         </p>
       </div>
     </div>
