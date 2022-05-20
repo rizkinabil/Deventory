@@ -1,5 +1,5 @@
 query MyQuery {
-  collections {
+  collections(limit: 3, order_by: { _id: asc }) {
     _id
     name
     imageUrl

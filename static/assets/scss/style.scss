@@ -72,6 +72,14 @@ body {
   }
 }
 
+// loading spinner
+.wrapper-loading {
+  height: 100vh;
+  div {
+    margin: 50vh auto;
+  }
+}
+
 // ==== brand logo ====
 .navbar-brand-logo {
   color: $danger;

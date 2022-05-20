@@ -1,0 +1,15 @@
+query MyQuery {
+  item_blog(limit: 5, order_by: { _id: asc }) {
+    _id
+    author
+    paragraph
+    poster_path
+    preview_text
+    title
+    upload_at
+    blog {
+      _id
+      categories
+    }
+  }
+}

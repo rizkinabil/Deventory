@@ -7,7 +7,7 @@
     <div class="wrapper-blog-content">
       <div
         class="blog-content d-flex"
-        v-for="(item, index) in item_blog.slice(0, 5)"
+        v-for="(item, index) in item_blog"
         :key="index"
       >
         <div class="col-2 blog-index">
@@ -52,13 +52,13 @@
 </template>
 
 <script>
-import getAllItemBlog from '../gql/blog/getAllItemBlog.gql'
+import getAllItemBlogHome from '../gql/blog/getAllItemBlogHome.gql'
 
 export default {
   name: 'BlogsComponent',
   apollo: {
     item_blog: {
-      query: getAllItemBlog,
+      query: getAllItemBlogHome,
     },
   },
 }

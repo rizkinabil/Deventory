@@ -14,7 +14,7 @@
     <div class="list-collection">
       <div
         class="collection-item"
-        v-for="(item, index) in collections.slice(0, 4)"
+        v-for="(item, index) in collections"
         :key="index"
       >
         <NuxtLink

@@ -36,8 +36,9 @@
             <button class="btn btn-dark">
               <a
                 class="font-weight-normal text-light"
-                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fparse.com"
+                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdeventory.netlify.app"
                 rel="noopener"
+                target="blank"
               >
                 <i class="fab fa-2x fa-twitter"></i>Share
               </a>

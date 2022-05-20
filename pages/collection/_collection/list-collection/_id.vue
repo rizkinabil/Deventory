@@ -9,25 +9,18 @@
         :query="require('../../../../gql/collection/getItemCollectionByFk')"
         :variables="{ collectionId: _idCollection }"
       >
-        <template v-slot="{ result: { loading, error, data } }">
-          <div v-if="loading">
-            <div
-              class="spinner-border"
-              style="width: 3rem; height: 3rem"
-              role="status"
-            >
-              <span class="sr-only">Loading...</span>
-            </div>
-            <div
-              class="spinner-grow"
-              style="width: 3rem; height: 3rem"
-              role="status"
-            >
-              <span class="sr-only">Loading...</span>
+        <template v-slot="{ result: { error, data }, isLoading }">
+          <div class="wrapper-loading" v-if="isLoading">
+            <div>
+              <trinity-rings-spinner
+                :animation-duration="1500"
+                :size="66"
+                color="#ff1d5e"
+              />
             </div>
           </div>
 
-          <h3 v-if="error">An error occured</h3>
+          <h3 v-else-if="error">An error occured</h3>
 
           <div v-else-if="data" class="wrapper-content-item-col">
             <div class="header-content-item-col">
@@ -80,10 +73,14 @@
 
 <script>
 import util from '../../../../utils/util'
+import { TrinityRingsSpinner } from 'epic-spinners'
 
 export default {
   name: 'ItemCollectionComponent',
   layout: 'default',
+  components: {
+    TrinityRingsSpinner,
+  },
   computed: {
     _idCollection() {
       return this.$route.params.id

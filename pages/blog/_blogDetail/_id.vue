@@ -4,25 +4,18 @@
       :query="require('../../../gql/blog/getItemBlogByPk.gql')"
       :variables="{ id: _idBlog }"
     >
-      <template v-slot="{ result: { loading, error, data } }">
-        <div v-if="loading">
-          <div
-            class="spinner-border"
-            style="width: 3rem; height: 3rem"
-            role="status"
-          >
-            <span class="sr-only">Loading...</span>
-          </div>
-          <div
-            class="spinner-grow"
-            style="width: 3rem; height: 3rem"
-            role="status"
-          >
-            <span class="sr-only">Loading...</span>
+      <template v-slot="{ result: { error, data }, isLoading }">
+        <div class="wrapper-loading" v-if="isLoading">
+          <div>
+            <trinity-rings-spinner
+              :animation-duration="1500"
+              :size="66"
+              color="#ff1d5e"
+            />
           </div>
         </div>
 
-        <h3 v-if="error">An error occured</h3>
+        <h3 v-else-if="error">An error occured</h3>
 
         <div v-else-if="data">
           <div
@@ -83,7 +76,7 @@
             </div>
             <div class="row">
               <div class="paragraph col-md-8">
-                <p>{{ data.item_blog[0].paragraph }}</p>
+                <div v-html="data.item_blog[0].paragraph"></div>
               </div>
               <div class="discover-blog col-md-4">
                 <h3 class="font-weight-bold text-dark">Discover Blog</h3>
@@ -125,9 +118,13 @@
 
 <script>
 import getAllItemBlog from '../../../gql/blog/getAllItemBlog.gql'
+import { TrinityRingsSpinner } from 'epic-spinners'
 
 export default {
   name: 'DetailBlogComponent',
+  components: {
+    TrinityRingsSpinner,
+  },
   apollo: {
     item_blog: {
       query: getAllItemBlog,
@@ -148,12 +145,6 @@ export default {
     redirectTo(item) {
       this.$router.push(`/blog/${item.title}/${item._id}`)
     },
-  },
-  mounted() {
-    // setup random color
-    // var randomColor = Math.floor(Math.random() * 16777215).toString(16)
-    // var configAutoBg = document.querySelector('.img-profile')
-    // configAutoBg.style.backgroundColor = '#' + randomColor
   },
 }
 </script>
