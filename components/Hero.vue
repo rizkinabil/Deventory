@@ -13,7 +13,12 @@
       </p>
     </div>
     <div class="cta-button">
-      <button class="btn-custom-lg font-weight-normal">Let's Start</button>
+      <button
+        class="btn-custom-lg font-weight-normal"
+        @click="() => this.$emit('scrollTo')"
+      >
+        Let's Start
+      </button>
       <NuxtLink to="/blog" class="text-dark ml-3">See Blog</NuxtLink>
     </div>
   </div>

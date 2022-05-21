@@ -1,7 +1,7 @@
 <template>
   <section>
-    <hero-section />
-    <collection-section ref="start" />
+    <hero-section v-on:scrollTo="scrollElement" />
+    <collection-section />
     <blog-section />
     <banner-section />
   </section>
@@ -20,6 +20,11 @@ export default {
     CollectionSection,
     BlogSection,
     BannerSection,
+  },
+  methods: {
+    scrollElement() {
+      window.scrollTo({ top: 720, behavior: 'smooth' })
+    },
   },
 }
 </script>
