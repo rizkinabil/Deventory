@@ -5,6 +5,7 @@ query MyQuery($collectionId: uuid!) {
     description
     poster_path
     web_name
+    web_url
     collection {
       description
       imageUrl

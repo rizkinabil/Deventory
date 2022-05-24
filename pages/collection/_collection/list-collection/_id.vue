@@ -45,7 +45,7 @@
                     {{ trunc(item.description, 150) }}
                   </p>
                   <a
-                    :href="`http://${item.web_name}`"
+                    :href="`${item.web_url}`"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
