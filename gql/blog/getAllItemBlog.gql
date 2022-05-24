@@ -1,5 +1,5 @@
 query MyQuery {
-  item_blogy(order_by: { _id: asc }) {
+  item_blog(order_by: { _id: asc }) {
     _id
     author
     paragraph
